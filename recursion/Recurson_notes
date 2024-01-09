@@ -1,0 +1,57 @@
+
+
+
+What is Recursion?
+------------------
+
+Recursion is a programming technique where a function calls itself to solve a problem.
+It's like solving a big problem by breaking it down into smaller, more manageable pieces.
+This process continues until the smallest piece can be solved easily.
+Recursion is used when a problem can be divided into identical, smaller sub problems.
+
+Key Concepts
+
+1. Base Case: Every recursive function must have a base case, which is the condition that stops the recursion.
+Without a base case, the function will keep calling itself indefinitely and eventually run out of resources.
+
+2. Recursive Case: This is the part of the function where it calls itself with a modified version of the original problem. It moves the problem closer to the base case.
+
+Example: Calculating Factorial
+
+Let's use the factorial function as an example. The factorial of a non-negative integer n, denoted as n!, is the product of all positive integers from 1 to n.
+
+Eg:
+
+def factorial(n):
+    # Base case
+    if n == 0:
+        return 1
+    # Recursive case
+    else:
+        return n * factorial(n - 1)
+
+1. Base Case: If n is 0, we return 1 because 0! is defined as 1.
+2. Recursive Case: Otherwise, we multiply n by the result of factorial(n - 1), which is the factorial of a smaller number.
+
+
+
+How Recursion Works
+-------------------
+
+1. Suppose we call factorial(3).
+2. The function checks if n is 0 (base case is not met).
+3. It proceeds to the recursive case and returns 3 * factorial(2).
+4. Now, it calculates factorial(2) by calling the function again.
+5. This continues until we reach the base case, at which point it starts returning values back up the chain.
+
+Recursion Tips
+----------------
+
+1. Ensure that the base case is well-defined and eventually reached.
+2. Make sure the problem is broken down into smaller, identical subproblems.
+3. Test your recursive function with different inputs to avoid infinite recursion.
+
+When to Use Recursion
+
+Recursion is handy when solving problems that can be naturally divided into smaller, similar sub problems,
+such as searching tree structures, sorting algorithms, and more.
